@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.Lantai_6_1">
+    tools:context=".lantai6.Lantai_6_1"
+    android:id="@+id/layout">
 
     <include layout="@layout/content_lantai_6_1" />
 

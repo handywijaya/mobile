@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.Lantai_6_1"
+    tools:context=".lantai6.Lantai_6_1"
     tools:showIn="@layout/activity_lantai_6_1"
     android:background="#000000">
 
@@ -15,40 +15,40 @@
         android:layout_height="match_parent"
         android:background="@drawable/lt6_1"/>
 
-    <ImageView android:id="@+id/ivStairDown"
+    <ImageButton android:id="@+id/ivStairDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/stair_project_lain"
+        android:background="@drawable/stair_project_lain"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-    <ImageView android:id="@+id/ivStairUp"
+    <ImageButton android:id="@+id/ivStairUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/stair"
+        android:background="@drawable/stair"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"/>
 
-    <ImageView android:id="@+id/ivMoveForward"
+    <ImageButton android:id="@+id/ivMoveForward"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:src="@drawable/move_position"
+        android:background="@drawable/move_position"
         android:layout_marginEnd="81dp"
         android:layout_alignTop="@+id/ivMoveToilet"
         android:layout_alignEnd="@+id/ivMoveBackward" />
 
-    <ImageView android:id="@+id/ivMoveBackward"
+    <ImageButton android:id="@+id/ivMoveBackward"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:src="@drawable/move_position"
+        android:background="@drawable/move_position"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/ivStairDown"
         android:layout_marginStart="199dp" />
 
-    <ImageView android:id="@+id/ivMoveToilet"
+    <ImageButton android:id="@+id/ivMoveToilet"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:src="@drawable/move_position"
+        android:background="@drawable/move_position"
         android:layout_alignBottom="@+id/ivStairUp"
         android:layout_toEndOf="@+id/ivMoveBackward" />
 
