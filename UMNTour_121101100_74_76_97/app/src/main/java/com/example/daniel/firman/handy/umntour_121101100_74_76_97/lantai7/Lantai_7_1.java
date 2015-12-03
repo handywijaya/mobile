@@ -4,8 +4,9 @@ import android.os.Bundle;
 import android.app.Activity;
 
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 
-public class Lantai_7_1 extends Activity {
+public class Lantai_7_1 extends TourClassActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
