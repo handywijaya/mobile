@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">UMNTour_121101100_74_76_97</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_lantai_6_1">Lantai_6_1</string>
+    <string name="title_activity_lantai_6_2">Lantai_6_2</string>
+    <string name="title_activity_lantai_6_3">Lantai_6_3</string>
+    <string name="title_activity_lantai_6_4">Lantai_6_4</string>
+    <string name="title_activity_lantai_6_5">Lantai_6_5</string>
+    <string name="title_activity_lantai_6_6">Lantai_6_6</string>
+    <string name="title_activity_lantai_6_7">Lantai_6_7</string>
+    <string name="title_activity_lantai_6_8">Lantai_6_8</string>
+    <string name="title_activity_lab_komputer">LabKomputer</string>
+    <string name="title_activity_lab_mac">LabMac</string>
+    <string name="title_activity_kelas_besar_kayu">KelasBesarKayu</string>
+    <string name="title_activity_kelas_besar">KelasBesar</string>
+    <string name="title_activity_kelas_besar_tengah">KelasBesarTengah</string>
+    <string name="title_activity_kelas_regular">KelasRegular</string>
+    <string name="title_activity_lantai_7_1">Lantai_7_1</string>
+</resources>
