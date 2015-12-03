@@ -53,6 +53,7 @@ public class TourClassActivity extends AppCompatActivity {
 
     protected void setUpLayout(final String info2) {
         layout = (RelativeLayout) findViewById(R.id.layout);
+        bg = (ImageView) findViewById(R.id.bg);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);

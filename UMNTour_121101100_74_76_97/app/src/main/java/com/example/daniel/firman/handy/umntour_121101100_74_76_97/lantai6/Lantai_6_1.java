@@ -19,18 +19,21 @@ public class Lantai_6_1 extends TourClassActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lantai_6_1);
 
+        //lantai berapa
         floorInformation = 6;
+
+        //informasi yang mau dimasukkan
         String information = "Consists of Big Classrooms";
 
         setUpLayout(information);
-
-        bg = (ImageView) findViewById(R.id.bg);
 
         ivStairsDown = (ImageButton) findViewById(R.id.ivStairDown);
         ivStairsDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String info = "This stairs connects the 6th floor and the 5th floor of tower C";
+
+                //kalo turun kasi floorInformation - 1
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_other_floor, Lantai_6_1.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -40,12 +43,16 @@ public class Lantai_6_1 extends TourClassActivity {
         ivStairsUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //keterangan dialog fragment
                 String info = "Do you want to go upstairs?";
+
+                //kalo naek kasi floorInformation + 1
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_6_1.this, floorInformation + 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 
+        //selain backward pake scale in
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +63,7 @@ public class Lantai_6_1 extends TourClassActivity {
             }
         });
 
+        //backward pake scale out
         ivMoveBackward = (ImageButton) findViewById(R.id.ivMoveBackward);
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
