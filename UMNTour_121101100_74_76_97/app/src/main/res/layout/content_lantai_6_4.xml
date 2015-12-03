@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg"
+        android:background="@drawable/lt6_4"/>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ivMoveElevator"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="335dp"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivMoveForward"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="270dp"/>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ivInKelasBesar"
+        android:background="@drawable/ic_in_door"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="435dp"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/ivInKelasBesarTengah"
+        android:background="@drawable/ic_in_door"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="145dp"
+        android:layout_marginStart="80dp"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivMoveBackward"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="225dp" />
+
+
+</RelativeLayout>

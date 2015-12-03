@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.daniel.firman.handy.umntour_121101100_74_76_97">
+    package="com.example.daniel.firman.handy.umntour_121101100_74_76_97"
+    android:largeHeap="true">
 
     <application
         android:allowBackup="true"
@@ -21,12 +22,10 @@
         </activity>
         <activity
             android:name=".lantai6.Lantai_6_1"
-            android:label="@string/title_activity_lantai_6_1"
-            android:screenOrientation="landscape" />
+            android:label="@string/title_activity_lantai_6_1"/>
         <activity
             android:name=".lantai6.Lantai_6_2"
-            android:label="@string/title_activity_lantai_6_2"
-            android:screenOrientation="landscape" />
+            android:label="@string/title_activity_lantai_6_2"/>
         <activity
             android:name=".lantai6.Lantai_6_3"
             android:label="@string/title_activity_lantai_6_3" />
