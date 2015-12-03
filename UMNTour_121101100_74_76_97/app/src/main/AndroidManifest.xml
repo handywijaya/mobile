@@ -13,11 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".lantai6.Lantai_6_1"
@@ -29,52 +25,74 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_3"
-            android:label="@string/title_activity_lantai_6_3" />
+            android:label="@string/title_activity_lantai_6_3"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_4"
-            android:label="@string/title_activity_lantai_6_4" />
+            android:label="@string/title_activity_lantai_6_4"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_5"
-            android:label="@string/title_activity_lantai_6_5" />
+            android:label="@string/title_activity_lantai_6_5"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_6"
-            android:label="@string/title_activity_lantai_6_6" />
+            android:label="@string/title_activity_lantai_6_6"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_7"
-            android:label="@string/title_activity_lantai_6_7" />
+            android:label="@string/title_activity_lantai_6_7"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai6.Lantai_6_8"
-            android:label="@string/title_activity_lantai_6_8" />
+            android:label="@string/title_activity_lantai_6_8"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.LabKomputer"
-            android:label="@string/title_activity_lab_komputer" />
+            android:label="@string/title_activity_lab_komputer"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.LabMac"
-            android:label="@string/title_activity_lab_mac" />
+            android:label="@string/title_activity_lab_mac"
+            android:screenOrientation="landscape"  />
         <activity
             android:name=".kelas.KelasBesarKayu"
-            android:label="@string/title_activity_kelas_besar_kayu" />
+            android:label="@string/title_activity_kelas_besar_kayu"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.KelasBesar"
-            android:label="@string/title_activity_kelas_besar" />
+            android:label="@string/title_activity_kelas_besar"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.KelasBesarTengah"
-            android:label="@string/title_activity_kelas_besar_tengah" />
+            android:label="@string/title_activity_kelas_besar_tengah"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.KelasRegular"
-            android:label="@string/title_activity_kelas_regular" />
+            android:label="@string/title_activity_kelas_regular"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai7.Lantai_7_1"
-            android:label="@string/title_activity_lantai_7_1" />
+            android:label="@string/title_activity_lantai_7_1"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_1"
-            android:label="@string/title_activity_lantai_8_1" />
+            android:label="@string/title_activity_lantai_8_1"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".lantai8.Lantai_8_2"
-            android:label="@string/title_activity_lantai_8_2" />
+            android:label="@string/title_activity_lantai_8_2"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_3"
-            android:label="@string/title_activity_lantai_8_3"></activity>
+            android:label="@string/title_activity_lantai_8_3"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
