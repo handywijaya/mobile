@@ -6,8 +6,11 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
@@ -47,10 +50,11 @@ public class BlurDialog extends BlurDialogFragment {
     static int layoutInt;
     static BlurDialog fragment;
     private static TourClassActivity tourClass;
-    static String floorInformation, information;
+    static int floor;
+    static String information;
     Button btnYes, btnNo, btnClose;
 
-    public static BlurDialog newInstance(int layoutId, TourClassActivity tourClassActivity, String floorInfo, String info) {
+    public static BlurDialog newInstance(int layoutId, TourClassActivity tourClassActivity, int floorInformation, String info) {
         fragment = new BlurDialog();
         Bundle args = new Bundle();
         args.putInt(
@@ -72,7 +76,7 @@ public class BlurDialog extends BlurDialogFragment {
 
         layoutInt = layoutId;
         tourClass = tourClassActivity;
-        floorInformation = floorInfo;
+        floor = floorInformation;
         information = info;
 
         fragment.setArguments(args);
@@ -100,7 +104,7 @@ public class BlurDialog extends BlurDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        final View view = getActivity().getLayoutInflater().inflate(layoutInt, null);
+        View view = getActivity().getLayoutInflater().inflate(layoutInt, null);
 
         switch(layoutInt) {
             case R.layout.dialog_fragment_home :
@@ -131,7 +135,7 @@ public class BlurDialog extends BlurDialogFragment {
                 break;
             case R.layout.dialog_fragment_information :
                 TextView tvFloor = (TextView) view.findViewById(R.id.tvFloor);
-                tvFloor.setText(floorInformation);
+                tvFloor.setText(floor + "th Floor");
                 TextView tvInfo = (TextView) view.findViewById(R.id.tvInfo);
                 tvInfo.setText(information);
                 btnClose = (Button) view.findViewById(R.id.btnClose);
@@ -141,6 +145,28 @@ public class BlurDialog extends BlurDialogFragment {
                         fragment.dismiss();
                     }
                 });
+                break;
+            case R.layout.dialog_fragment_change_floor:
+                btnYes = (Button) view.findViewById(R.id.btnYes);
+                btnNo = (Button) view.findViewById(R.id.btnNo);
+                TextView tvChangeFloor = (TextView) view.findViewById(R.id.tvChangeFloor);
+                tvChangeFloor.setText(information);
+                btnYes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloor(floor);
+                        fragment.dismiss();
+                    }
+                });
+                btnNo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragment.dismiss();
+                    }
+                });
+                break;
+            case R.layout.dialog_fragment_other_floor:
+                if(floor == 5) Toast.makeText(view.getContext(), information, Toast.LENGTH_SHORT).show();
                 break;
         }
         builder.setView(view);

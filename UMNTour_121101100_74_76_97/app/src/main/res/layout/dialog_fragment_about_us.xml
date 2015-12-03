@@ -19,13 +19,32 @@
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:id="@+id/ivAboutUs"
-        android:background="@drawable/home_page_background"/>
+        android:layout_below="@+id/textView"
+        android:background="@drawable/test"
+        android:layout_above="@+id/nama" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Handy - Firman - Daniel"
+        android:id="@+id/nama"
+        android:layout_above="@+id/nim"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="12110110074 - 12110110076 - 12110110097"
+        android:id="@+id/nim"
+        android:layout_above="@+id/btnClose"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnClose"
-        android:layout_below="@+id/textView"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
         android:text="Close"/>
 
 </RelativeLayout>

@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai7.Lantai_7_1;
 
 /**
  * Created by Handy on 11/28/2015.
@@ -30,12 +32,14 @@ public class TourClassActivity extends AppCompatActivity {
     protected ImageView bg;
     protected Intent i;
     protected RelativeLayout layout;
+    protected int floorInformation;
+    protected BlurDialog blurDialog;
 
     @Override
     public void onBackPressed() {
-        String info1 = "Info";
+        int info1 = 6;
         String info2 = "Info";
-        BlurDialog blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, TourClassActivity.this, info1, info2);
+        blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, TourClassActivity.this, info1, info2);
         blurDialog.show(getFragmentManager(), "blur_sample");
     }
 
@@ -47,7 +51,7 @@ public class TourClassActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
     }
 
-    protected void setUpLayout(final String info1, final String info2) {
+    protected void setUpLayout(final String info2) {
         layout = (RelativeLayout) findViewById(R.id.layout);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -70,7 +74,7 @@ public class TourClassActivity extends AppCompatActivity {
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BlurDialog blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, TourClassActivity.this, info1, info2);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, TourClassActivity.this, floorInformation, info2);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -78,7 +82,7 @@ public class TourClassActivity extends AppCompatActivity {
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BlurDialog blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_about_us, TourClassActivity.this, info1, info2);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_about_us, TourClassActivity.this, floorInformation, info2);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -86,7 +90,7 @@ public class TourClassActivity extends AppCompatActivity {
         fab3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BlurDialog blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, TourClassActivity.this, info1, info2);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, TourClassActivity.this, floorInformation, info2);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -167,8 +171,12 @@ public class TourClassActivity extends AppCompatActivity {
             View child = v.getChildAt(i);
             if(child instanceof ViewGroup)
                 animateFadeInButtonBegin((ViewGroup) child);
-            else if(child instanceof ImageButton)
+            else if(child instanceof FloatingActionButton) {
+                if(child.getId() == R.id.fab) child.startAnimation(fadeIn);
+            }
+            else if(child instanceof ImageButton) {
                 child.startAnimation(fadeIn);
+            }
         }
 
     }
@@ -248,7 +256,38 @@ public class TourClassActivity extends AppCompatActivity {
 
     public void goHome() {
         i = new Intent(getApplicationContext(), MainActivity.class);
+        animateFadeOutButtonBegin(layout);
         animateFadeOutBegin();
+    }
+
+    public void changeFloor(int floor) {
+        switch(floor) {
+            case 6 :
+                i = new Intent(getApplicationContext(), Lantai_6_1.class);
+                animateFadeOutBegin();
+                break;
+            case 7 :
+                i = new Intent(getApplicationContext(), Lantai_7_1.class);
+                animateFadeOutBegin();
+                break;
+            case 8 :
+                /*i = new Intent(getApplicationContext(), Lantai_8_1.class);
+                animateFadeOutBegin();
+                break;*/
+            case 9 :
+                /*i = new Intent(getApplicationContext(), Lantai_9_1.class);
+                animateFadeOutBegin();
+                break;*/
+            case 10 :
+                /*i = new Intent(getApplicationContext(), Lantai_10_1.class);
+                animateFadeOutBegin();
+                break;*/
+            case 11 :
+                /*i = new Intent(getApplicationContext(), Lantai_11_1.class);
+                animateFadeOutBegin();*/
+                break;
+        }
+
     }
 
     protected void setButtonInvis(ViewGroup v) {
