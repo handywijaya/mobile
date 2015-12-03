@@ -6,4 +6,8 @@
     tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_7"
     android:id="@+id/layout">
 
+    <include layout="@layout/content_lantai_6_7" />
+
+    <include layout="@layout/button_layout" />
+
 </RelativeLayout>

@@ -44,6 +44,8 @@ public class Lantai_6_6 extends TourClassActivity {
                 animateScaleOutBegin(v);
             }
         });
+
+        animateFadeInBegin();
     }
 
 }

@@ -28,7 +28,7 @@ public class KelasBesarTengah extends TourClassActivity {
 
         setUpLayout(information);
 
-        ivOut = (ImageButton) findViewById(R.id.ivMoveBackward);
+        ivOut = (ImageButton) findViewById(R.id.ivOut);
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

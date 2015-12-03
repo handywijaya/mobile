@@ -9,7 +9,7 @@
         android:background="@drawable/ruang_kelas_besar_tengah"
         android:id="@+id/bg"/>
 
-    <ImageView
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/ic_out_door"
