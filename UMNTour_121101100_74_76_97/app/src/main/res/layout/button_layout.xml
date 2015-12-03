@@ -16,6 +16,7 @@
         android:visibility="invisible"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
+        app:backgroundTint="#FFF200"
         android:src="@drawable/ic_information" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
@@ -27,6 +28,7 @@
         android:visibility="invisible"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
+        app:backgroundTint="#0055FF"
         android:src="@drawable/ic_about_us" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab1"
@@ -38,6 +40,7 @@
         android:visibility="invisible"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
+        app:backgroundTint="#FF00FF"
         android:src="@drawable/ic_home" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -16,40 +16,44 @@
         android:background="@drawable/lt6_1"/>
 
     <ImageButton android:id="@+id/ivStairDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/stair_project_lain"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_stair_right"
+        android:backgroundTint="#FF0000"
+        android:layout_marginTop="251dp"
+        android:layout_marginStart="98dp" />
 
     <ImageButton android:id="@+id/ivStairUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/stair"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_stair_left"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="72dp"
+        android:layout_marginStart="78dp" />
 
     <ImageButton android:id="@+id/ivMoveForward"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:background="@drawable/move_position"
-        android:layout_marginEnd="81dp"
-        android:layout_alignTop="@+id/ivMoveToilet"
-        android:layout_alignEnd="@+id/ivMoveBackward" />
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="220dp" />
 
     <ImageButton android:id="@+id/ivMoveBackward"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:background="@drawable/move_position"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="84dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/ivStairDown"
-        android:layout_marginStart="199dp" />
+        android:layout_toEndOf="@+id/ivMoveForward" />
 
     <ImageButton android:id="@+id/ivMoveToilet"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:background="@drawable/move_position"
-        android:layout_alignBottom="@+id/ivStairUp"
-        android:layout_toEndOf="@+id/ivMoveBackward" />
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="375dp"
+        android:layout_marginTop="83dp" />
 
 </RelativeLayout>
