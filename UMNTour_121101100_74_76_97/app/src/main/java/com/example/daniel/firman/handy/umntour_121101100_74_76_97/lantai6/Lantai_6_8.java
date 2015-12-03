@@ -32,7 +32,7 @@ public class Lantai_6_8 extends TourClassActivity {
         ivHelp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C606 and C607\nBig Classrooms";
+                String info = "C605\nBig Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_8.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -42,7 +42,7 @@ public class Lantai_6_8 extends TourClassActivity {
         ivHelp2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C608\nBig Classroom";
+                String info = "C606\nBig Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_8.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -52,7 +52,7 @@ public class Lantai_6_8 extends TourClassActivity {
         ivHelp3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C608\nBig Classroom";
+                String info = "C610\nBig Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_8.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

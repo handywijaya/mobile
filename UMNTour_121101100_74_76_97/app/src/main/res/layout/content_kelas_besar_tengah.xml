@@ -16,6 +16,6 @@
         android:backgroundTint="#00FF00"
         android:id="@+id/ivOut"
         android:layout_marginTop="85dp"
-        android:layout_marginStart="480dp"/>
+        android:layout_marginStart="520dp"/>
 
 </RelativeLayout>
