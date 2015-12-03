@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg"
+        android:background="@drawable/lt6_3"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:id="@+id/ivHelp1"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="100dp"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:id="@+id/ivHelp2"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="450dp"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:id="@+id/ivMoveForward"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="25dp"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:id="@+id/ivMoveBackward"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="215dp" />
+
+</RelativeLayout>

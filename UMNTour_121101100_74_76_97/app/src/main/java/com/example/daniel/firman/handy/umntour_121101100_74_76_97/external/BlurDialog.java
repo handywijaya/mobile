@@ -166,7 +166,15 @@ public class BlurDialog extends BlurDialogFragment {
                 });
                 break;
             case R.layout.dialog_fragment_other_floor:
-                if(floor == 5) Toast.makeText(view.getContext(), information, Toast.LENGTH_SHORT).show();
+                TextView tv = (TextView) view.findViewById(R.id.textView);
+                tv.setText(information);
+                btnClose = (Button) view.findViewById(R.id.btnClose);
+                btnClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragment.dismiss();
+                    }
+                });
                 break;
         }
         builder.setView(view);

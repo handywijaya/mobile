@@ -16,7 +16,7 @@
         android:visibility="invisible"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
-        app:backgroundTint="#FFF200"
+        app:backgroundTint="#F0F03C"
         android:src="@drawable/ic_information" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"

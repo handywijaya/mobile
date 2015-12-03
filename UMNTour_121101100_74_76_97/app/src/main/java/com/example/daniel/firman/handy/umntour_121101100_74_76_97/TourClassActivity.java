@@ -157,6 +157,10 @@ public class TourClassActivity extends AppCompatActivity {
             View child = v.getChildAt(i);
             if(child instanceof ViewGroup)
                 animateFadeOutButtonBegin((ViewGroup) child);
+            else if(child instanceof FloatingActionButton) {
+                if(child.getId() == R.id.fab) child.startAnimation(fadeOut);
+                if(isFabOpen) child.startAnimation(fadeOut);
+            }
             else if(child instanceof ImageButton)
                 child.startAnimation(fadeOut);
         }
