@@ -12,9 +12,7 @@
         tools:replace="android:icon">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".lantai6.Lantai_6_1"
             android:label="@string/title_activity_lantai_6_1"
@@ -54,7 +52,7 @@
         <activity
             android:name=".kelas.LabMac"
             android:label="@string/title_activity_lab_mac"
-            android:screenOrientation="landscape"  />
+            android:screenOrientation="landscape" />
         <activity
             android:name=".kelas.KelasBesarKayu"
             android:label="@string/title_activity_kelas_besar_kayu"
@@ -93,6 +91,23 @@
             android:name=".lantai8.Lantai_8_3"
             android:label="@string/title_activity_lantai_8_3"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_4"
+            android:label="@string/title_activity_lantai_8_4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_5"
+            android:label="@string/title_activity_lantai_8_5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_6"
+            android:label="@string/title_activity_lantai_8_6" />
+        <activity
+            android:name=".lantai8.Lantai_8_7"
+            android:label="@string/title_activity_lantai_8_7" />
+        <activity
+            android:name=".lantai8.Lantai_8_8"
+            android:label="@string/title_activity_lantai_8_8"></activity>
     </application>
 
 </manifest>
