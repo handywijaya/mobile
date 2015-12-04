@@ -16,10 +16,16 @@
             android:label="@string/app_name" />
         <activity
             android:name=".lantai6.Lantai_6_1"
-            android:label="@string/title_activity_lantai_6_1"/>
+            android:label="@string/title_activity_lantai_6_1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".lantai6.Lantai_6_2"
-            android:label="@string/title_activity_lantai_6_2"/>
+            android:label="@string/title_activity_lantai_6_2" />
         <activity
             android:name=".lantai6.Lantai_6_3"
             android:label="@string/title_activity_lantai_6_3"
@@ -74,21 +80,15 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_1"
-            android:label="@string/title_activity_lantai_8_1"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/title_activity_lantai_8_4"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_2"
-            android:label="@string/title_activity_lantai_8_2"
+            android:label="@string/title_activity_lantai_8_4"
             android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_3"
-            android:label="@string/title_activity_lantai_8_3"
+            android:label="@string/title_activity_lantai_8_4"
             android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_4"
@@ -106,7 +106,25 @@
             android:label="@string/title_activity_lantai_8_7" />
         <activity
             android:name=".lantai8.Lantai_8_8"
-            android:label="@string/title_activity_lantai_8_8"></activity>
+            android:label="@string/title_activity_lantai_8_8" />
+        <activity
+            android:name=".lantai7.Lantai_7_2"
+            android:label="@string/title_activity_lantai_7_2" />
+        <activity
+            android:name=".kelas.KelasLukis"
+            android:label="@string/title_activity_kelas_lukis" />
+        <activity
+            android:name=".lantai7.Lantai_7_3"
+            android:label="@string/title_activity_lantai_7_3" />
+        <activity
+            android:name=".lantai7.Lantai_7_4"
+            android:label="@string/title_activity_lantai_7_4" />
+        <activity
+            android:name=".lantai7.Lantai_7_5"
+            android:label="@string/title_activity_lantai_7_5" />
+        <activity
+            android:name=".lantai7.Lantai_7_6"
+            android:label="@string/title_activity_lantai_7_6"></activity>
     </application>
 
 </manifest>
