@@ -109,7 +109,22 @@
             android:label="@string/title_activity_lantai_8_8" />
         <activity
             android:name=".lantai9.Lantai_9_1"
-            android:label="@string/title_activity_lantai_9_1"></activity>
+            android:label="@string/title_activity_lantai_9_1" />
+        <activity
+            android:name=".lantai9.Lantai_9_2"
+            android:label="@string/title_activity_lantai_9_2" />
+        <activity
+            android:name=".lantai9.Lantai_9_3"
+            android:label="@string/title_activity_lantai_9_3" />
+        <activity
+            android:name=".lantai9.Lantai_9_4"
+            android:label="@string/title_activity_lantai_9_4" />
+        <activity
+            android:name=".lantai9.Lantai_9_5"
+            android:label="@string/title_activity_lantai_9_5" />
+        <activity
+            android:name=".lantai9.Lantai_9_6"
+            android:label="@string/title_activity_lantai_9_6"></activity>
     </application>
 
 </manifest>
