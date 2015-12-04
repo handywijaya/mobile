@@ -16,10 +16,10 @@
             android:label="@string/app_name" />
         <activity
             android:name=".lantai6.Lantai_6_1"
-            android:label="@string/title_activity_lantai_6_1"/>
+            android:label="@string/title_activity_lantai_6_1" />
         <activity
             android:name=".lantai6.Lantai_6_2"
-            android:label="@string/title_activity_lantai_6_2"/>
+            android:label="@string/title_activity_lantai_6_2" />
         <activity
             android:name=".lantai6.Lantai_6_3"
             android:label="@string/title_activity_lantai_6_3"
@@ -106,7 +106,10 @@
             android:label="@string/title_activity_lantai_8_7" />
         <activity
             android:name=".lantai8.Lantai_8_8"
-            android:label="@string/title_activity_lantai_8_8"></activity>
+            android:label="@string/title_activity_lantai_8_8" />
+        <activity
+            android:name=".lantai9.Lantai_9_1"
+            android:label="@string/title_activity_lantai_9_1"></activity>
     </application>
 
 </manifest>
