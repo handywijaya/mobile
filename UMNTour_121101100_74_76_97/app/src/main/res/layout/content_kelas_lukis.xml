@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ruang_lukis"
+        android:id="@+id/bg"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_out_door"
+        android:backgroundTint="#00FF00"
+        android:id="@+id/ivOut"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

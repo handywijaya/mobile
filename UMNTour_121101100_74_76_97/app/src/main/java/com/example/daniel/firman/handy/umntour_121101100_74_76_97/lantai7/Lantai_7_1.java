@@ -9,13 +9,14 @@ import android.widget.ImageButton;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_2;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_3;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_8;
 
 public class Lantai_7_1 extends TourClassActivity {
 
-    public ImageButton ivStairsDown, ivStairsUp, ivMoveForward, ivMoveBackward, ivMoveToilet;
+    public ImageButton ivStairsDown, ivStairsUp, ivMoveForward, ivMoveBackward, ivHelpToilet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class Lantai_7_1 extends TourClassActivity {
         floorInformation = 7;
 
         //informasi yang mau dimasukkan
-        String information = "Consists of Big Classrooms";
+        String information = "Consists of Big Classrooms, Laboratory Room,"+"\n"+"Mac Laboratory Room, and Painting Room";
 
         setUpLayout(information);
 
@@ -33,10 +34,10 @@ public class Lantai_7_1 extends TourClassActivity {
         ivStairsDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "This stairs connects the 7th floor and the 6th floor of tower C";
+                String info="Do you want to go downstairs?";
 
                 //kalo turun kasi floorInformation - 1
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_other_floor, Lantai_7_1.this, floorInformation - 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_7_1.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -49,7 +50,7 @@ public class Lantai_7_1 extends TourClassActivity {
                 String info = "Do you want to go upstairs?";
 
                 //kalo naek kasi floorInformation + 1
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_7_1.this, floorInformation + 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_8_1.this, floorInformation + 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -59,7 +60,7 @@ public class Lantai_7_1 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_3.class);
+                i = new Intent(getApplicationContext(), Lantai_7_2.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }
@@ -70,19 +71,20 @@ public class Lantai_7_1 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_8.class);
+                i = new Intent(getApplicationContext(), Lantai_7_6.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleOutBegin(v);
             }
         });
 
-        ivMoveToilet = (ImageButton) findViewById(R.id.ivMoveToilet);
-        ivMoveToilet.setOnClickListener(new View.OnClickListener() {
+
+        ivHelpToilet = (ImageButton) findViewById(R.id.ivMoveToilet);
+        ivHelpToilet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_2.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                String info = "This leads to toilet";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_7_1.this, floorInformation, info);
+                blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 
