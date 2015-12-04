@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.daniel.firman.handy.umntour_121101100_74_76_97">
+    package="com.example.daniel.firman.handy.umntour_121101100_74_76_97"
+    android:largeHeap="true">
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,69 @@
         tools:replace="android:icon">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" />
+        <activity
+            android:name=".lantai6.Lantai_6_1"
+            android:label="@string/title_activity_lantai_6_1"/>
+        <activity
+            android:name=".lantai6.Lantai_6_2"
+            android:label="@string/title_activity_lantai_6_2"/>
+        <activity
+            android:name=".lantai6.Lantai_6_3"
+            android:label="@string/title_activity_lantai_6_3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai6.Lantai_6_4"
+            android:label="@string/title_activity_lantai_6_4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai6.Lantai_6_5"
+            android:label="@string/title_activity_lantai_6_5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai6.Lantai_6_6"
+            android:label="@string/title_activity_lantai_6_6"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai6.Lantai_6_7"
+            android:label="@string/title_activity_lantai_6_7"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai6.Lantai_6_8"
+            android:label="@string/title_activity_lantai_6_8"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.LabKomputer"
+            android:label="@string/title_activity_lab_komputer"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.LabMac"
+            android:label="@string/title_activity_lab_mac"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.KelasBesarKayu"
+            android:label="@string/title_activity_kelas_besar_kayu"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.KelasBesar"
+            android:label="@string/title_activity_kelas_besar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.KelasBesarTengah"
+            android:label="@string/title_activity_kelas_besar_tengah"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".kelas.KelasRegular"
+            android:label="@string/title_activity_kelas_regular"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai7.Lantai_7_1"
+            android:label="@string/title_activity_lantai_7_1"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_1"
+            android:label="@string/title_activity_lantai_8_1"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,61 +83,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".lantai6.Lantai_6_1"
-            android:label="@string/title_activity_lantai_6_1"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".lantai6.Lantai_6_2"
-            android:label="@string/title_activity_lantai_6_2"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".lantai6.Lantai_6_3"
-            android:label="@string/title_activity_lantai_6_3" />
-        <activity
-            android:name=".lantai6.Lantai_6_4"
-            android:label="@string/title_activity_lantai_6_4" />
-        <activity
-            android:name=".lantai6.Lantai_6_5"
-            android:label="@string/title_activity_lantai_6_5" />
-        <activity
-            android:name=".lantai6.Lantai_6_6"
-            android:label="@string/title_activity_lantai_6_6" />
-        <activity
-            android:name=".lantai6.Lantai_6_7"
-            android:label="@string/title_activity_lantai_6_7" />
-        <activity
-            android:name=".lantai6.Lantai_6_8"
-            android:label="@string/title_activity_lantai_6_8" />
-        <activity
-            android:name=".kelas.LabKomputer"
-            android:label="@string/title_activity_lab_komputer" />
-        <activity
-            android:name=".kelas.LabMac"
-            android:label="@string/title_activity_lab_mac" />
-        <activity
-            android:name=".kelas.KelasBesarKayu"
-            android:label="@string/title_activity_kelas_besar_kayu" />
-        <activity
-            android:name=".kelas.KelasBesar"
-            android:label="@string/title_activity_kelas_besar" />
-        <activity
-            android:name=".kelas.KelasBesarTengah"
-            android:label="@string/title_activity_kelas_besar_tengah" />
-        <activity
-            android:name=".kelas.KelasRegular"
-            android:label="@string/title_activity_kelas_regular" />
-        <activity
-            android:name=".lantai7.Lantai_7_1"
-            android:label="@string/title_activity_lantai_7_1" />
-        <activity
-            android:name=".lantai8.Lantai_8_1"
-            android:label="@string/title_activity_lantai_8_1" />
-        <activity
             android:name=".lantai8.Lantai_8_2"
-            android:label="@string/title_activity_lantai_8_2" />
+            android:label="@string/title_activity_lantai_8_2"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai8.Lantai_8_3"
-            android:label="@string/title_activity_lantai_8_3"></activity>
+            android:label="@string/title_activity_lantai_8_3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_4"
+            android:label="@string/title_activity_lantai_8_4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_5"
+            android:label="@string/title_activity_lantai_8_5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".lantai8.Lantai_8_6"
+            android:label="@string/title_activity_lantai_8_6" />
+        <activity
+            android:name=".lantai8.Lantai_8_7"
+            android:label="@string/title_activity_lantai_8_7" />
+        <activity
+            android:name=".lantai8.Lantai_8_8"
+            android:label="@string/title_activity_lantai_8_8"></activity>
     </application>
 
 </manifest>

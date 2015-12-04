@@ -112,7 +112,7 @@ public class TourClassActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 startActivity(i);
-                finish();
+                android.os.Process.killProcess(android.os.Process.myPid());
             }
 
             @Override

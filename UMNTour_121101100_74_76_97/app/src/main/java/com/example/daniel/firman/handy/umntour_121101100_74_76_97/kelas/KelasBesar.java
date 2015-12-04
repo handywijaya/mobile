@@ -24,7 +24,8 @@ public class KelasBesar extends TourClassActivity {
         floorInformation = 6;
 
         //informasi yang mau dimasukkan
-        String information = "Consists of Big Classrooms";
+        String information = "C601\n" +
+                "Big Classroom";
 
         setUpLayout(information);
 
@@ -37,6 +38,8 @@ public class KelasBesar extends TourClassActivity {
                 animateScaleInBegin(v);
             }
         });
+
+        animateFadeInBegin();
     }
 
 }
