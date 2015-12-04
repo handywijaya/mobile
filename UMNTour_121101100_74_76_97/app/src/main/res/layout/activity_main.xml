@@ -10,6 +10,6 @@
 
     <include layout="@layout/content_main" />
 
-    <include layout="@layout/button_layout_main" />
+    <!-- <include layout="@layout/button_layout_main" /> -->
 
 </RelativeLayout>

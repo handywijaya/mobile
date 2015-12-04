@@ -13,6 +13,7 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_2;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_3;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_8;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai8.Lantai_8_1;
 
 public class Lantai_7_1 extends TourClassActivity {
 
@@ -50,7 +51,7 @@ public class Lantai_7_1 extends TourClassActivity {
                 String info = "Do you want to go upstairs?";
 
                 //kalo naek kasi floorInformation + 1
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_8_1.this, floorInformation + 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_7_1.this, floorInformation + 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
