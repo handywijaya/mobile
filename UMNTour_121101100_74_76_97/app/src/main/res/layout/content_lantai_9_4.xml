@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".lantai8.Lantai_9_4"
+    tools:showIn="@layout/activity_lantai_9_4"
+    android:background="#000000">
+
+    <ImageView android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lt9_4"/>
+
+    <ImageButton android:id="@+id/ivMoveForward"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="180dp" />
+
+    <ImageButton android:id="@+id/ivMoveBackward"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="290dp" />
+
+    <ImageButton android:id="@+id/ivEnter909"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:layout_marginStart="505dp"
+        android:layout_marginTop="220dp"/>
+
+    <ImageButton android:id="@+id/ivEnter907"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="170dp"/>
+
+    <ImageButton android:id="@+id/ivEnter914"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="230dp"/>
+
+</RelativeLayout>
