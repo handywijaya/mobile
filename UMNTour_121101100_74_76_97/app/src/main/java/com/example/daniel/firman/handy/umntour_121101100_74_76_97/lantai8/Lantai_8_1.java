@@ -27,7 +27,7 @@ public class Lantai_8_1 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "Do you want to go downstairs?";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_8_1.this, floorInformation + 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_8_1.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });

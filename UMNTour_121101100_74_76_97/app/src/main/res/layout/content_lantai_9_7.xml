@@ -5,29 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".lantai9.Lantai_9_2"
-    tools:showIn="@layout/activity_lantai_9_2"
+    tools:context=".lantai9.Lantai_9_7"
+    tools:showIn="@layout/activity_lantai_9_7"
     android:background="#000000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lt8_2"/>
 
     <ImageView android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/lt9_2"/>
-
-    <ImageButton android:id="@+id/ivMoveForward"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/ic_move"
-        android:backgroundTint="#00FF00"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="160dp" />
+        android:background="@drawable/lt8_2"/>
 
     <ImageButton android:id="@+id/ivMoveBackward"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="290dp" />
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="290dp"/>
 
 </RelativeLayout>

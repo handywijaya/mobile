@@ -5,53 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".lantai9.Lantai_9_4"
-    tools:showIn="@layout/activity_lantai_9_4"
+    tools:context=".lantai9.Lantai_9_6"
+    tools:showIn="@layout/activity_lantai_9_6"
     android:background="#000000">
 
     <ImageView android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/lt9_4"/>
+        android:background="@drawable/lt9_6"/>
 
     <ImageButton android:id="@+id/ivMoveForward"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="180dp" />
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="145dp" />
 
     <ImageButton android:id="@+id/ivMoveBackward"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="260dp"
+        android:layout_marginStart="350dp"
         android:layout_marginTop="290dp" />
 
-    <ImageButton android:id="@+id/ivEnter909"
+    <ImageButton android:id="@+id/ivEnter913"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:background="@drawable/ic_help"
-        android:backgroundTint="#00FFFF"
-        android:layout_marginStart="505dp"
-        android:layout_marginTop="220dp"/>
+        android:background="@drawable/ic_in_door"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="200dp"/>
 
-    <ImageButton android:id="@+id/ivEnter907"
+    <ImageButton android:id="@+id/ivEnter901"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/ic_help"
-        android:backgroundTint="#00FFFF"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="170dp"/>
+        android:background="@drawable/ic_in_door"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="385dp"
+        android:layout_marginTop="150dp"/>
 
-    <ImageButton android:id="@+id/ivEnter914"
+    <ImageButton android:id="@+id/ivEnter903"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/ic_help"
         android:backgroundTint="#00FFFF"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="230dp"/>
+        android:layout_marginStart="520dp"
+        android:layout_marginTop="180dp"/>
 
 </RelativeLayout>

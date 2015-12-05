@@ -124,7 +124,10 @@
             android:label="@string/title_activity_lantai_7_5" />
         <activity
             android:name=".lantai7.Lantai_7_6"
-            android:label="@string/title_activity_lantai_7_6"></activity>
+            android:label="@string/title_activity_lantai_7_6" />
+        <activity
+            android:name=".lantai9.Lantai_9_7"
+            android:label="@string/title_activity_lantai_9_7"></activity>
     </application>
 
 </manifest>

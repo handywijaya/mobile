@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/layout"
-    tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_6">
+    tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_7">
 
-    <include layout="@layout/content_lantai_9_6" />
+    <include layout="@layout/content_lantai_9_7" />
     <include layout="@layout/button_layout" />
 
 </RelativeLayout>
