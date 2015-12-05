@@ -18,8 +18,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.andexert.library.RippleView;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai10.Lantai_10_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai11.Lantai_11_1;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai7.Lantai_7_1;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai8.Lantai_8_1;
@@ -37,6 +39,7 @@ public class TourClassActivity extends AppCompatActivity {
     protected RelativeLayout layout;
     protected int floorInformation;
     protected BlurDialog blurDialog;
+    protected String start;
 
     @Override
     public void onBackPressed() {
@@ -161,7 +164,7 @@ public class TourClassActivity extends AppCompatActivity {
             if(child instanceof ViewGroup)
                 animateFadeOutButtonBegin((ViewGroup) child);
             else if(child instanceof FloatingActionButton) {
-                if(child.getId() == R.id.fab) child.startAnimation(fadeOut);
+                if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeOut);
                 if(isFabOpen) child.startAnimation(fadeOut);
             }
             else if(child instanceof ImageButton)
@@ -180,13 +183,12 @@ public class TourClassActivity extends AppCompatActivity {
             if(child instanceof ViewGroup)
                 animateFadeInButtonBegin((ViewGroup) child);
             else if(child instanceof FloatingActionButton) {
-                if(child.getId() == R.id.fab) child.startAnimation(fadeIn);
+                if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
             }
             else if(child instanceof ImageButton) {
                 child.startAnimation(fadeIn);
             }
         }
-
     }
 
     protected void animateScaleOutBegin(View v) {
@@ -241,10 +243,8 @@ public class TourClassActivity extends AppCompatActivity {
             fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
-            fab3.startAnimation(fab_close);
             fab1.setClickable(false);
             fab2.setClickable(false);
-            fab3.setClickable(false);
             isFabOpen = false;
 
         } else {
@@ -252,10 +252,8 @@ public class TourClassActivity extends AppCompatActivity {
             fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
-            fab3.startAnimation(fab_open);
             fab1.setClickable(true);
             fab2.setClickable(true);
-            fab3.setClickable(true);
             isFabOpen = true;
             Log.d("Raj", "open");
 
@@ -272,27 +270,33 @@ public class TourClassActivity extends AppCompatActivity {
         switch(floor) {
             case 6 :
                 i = new Intent(getApplicationContext(), Lantai_6_1.class);
+                animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;
             case 7 :
                 i = new Intent(getApplicationContext(), Lantai_7_1.class);
+                animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;
             case 8 :
                 i = new Intent(getApplicationContext(), Lantai_8_1.class);
+                animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;
             case 9 :
                 i = new Intent(getApplicationContext(), Lantai_9_1.class);
+                animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;
             case 10 :
                 i = new Intent(getApplicationContext(), Lantai_10_1.class);
+                animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;
             case 11 :
-                /*i = new Intent(getApplicationContext(), Lantai_11_1.class);
-                animateFadeOutBegin();*/
+                i = new Intent(getApplicationContext(), Lantai_11_1.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
                 break;
         }
 

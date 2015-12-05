@@ -43,7 +43,7 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_help"
         android:backgroundTint="#00FFFF"
-        android:layout_marginStart="530dp"
+        android:layout_marginStart="570dp"
         android:layout_marginTop="190dp"/>
 
     <ImageButton android:id="@+id/ivEnter1007"
@@ -51,7 +51,7 @@
         android:layout_height="40dp"
         android:background="@drawable/ic_help"
         android:backgroundTint="#00FFFF"
-        android:layout_marginStart="260dp"
+        android:layout_marginStart="290dp"
         android:layout_marginTop="150dp"/>
 
 </RelativeLayout>

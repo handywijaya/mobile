@@ -176,6 +176,15 @@ public class BlurDialog extends BlurDialogFragment {
                     }
                 });
                 break;
+            case R.layout.dialog_fragment_start:
+                btnClose = (Button) view.findViewById(R.id.btnClose);
+                btnClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragment.dismiss();
+                    }
+                });
+                break;
         }
         builder.setView(view);
         return builder.create();

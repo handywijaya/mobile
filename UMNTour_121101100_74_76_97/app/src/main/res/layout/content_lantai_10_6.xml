@@ -19,7 +19,7 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="270dp"
         android:layout_marginTop="200dp" />
 
     <ImageButton android:id="@+id/ivMoveBackward"
@@ -27,8 +27,8 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="310dp"
-        android:layout_marginTop="290dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton android:id="@+id/ivEnter1014"
         android:layout_width="55dp"
@@ -51,7 +51,7 @@
         android:layout_height="40dp"
         android:background="@drawable/ic_in_door"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="310dp"
+        android:layout_marginStart="325dp"
         android:layout_marginTop="200dp"/>
 
 </RelativeLayout>

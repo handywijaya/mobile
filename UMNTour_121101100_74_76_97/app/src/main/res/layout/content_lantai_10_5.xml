@@ -27,16 +27,8 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="290dp" />
-
-    <ImageButton android:id="@+id/ivMoveToilet"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/ic_help"
-        android:backgroundTint="#00FFFF"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="290dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="230dp" />
 
     <ImageButton android:id="@+id/ivEnter1006"
         android:layout_width="55dp"
@@ -61,13 +53,5 @@
         android:backgroundTint="#00FFFF"
         android:layout_marginStart="135dp"
         android:layout_marginTop="160dp"/>
-
-    <ImageButton android:id="@+id/ivEnter1001"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_in_door"
-        android:backgroundTint="#00FF00"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="110dp"/>
 
 </RelativeLayout>

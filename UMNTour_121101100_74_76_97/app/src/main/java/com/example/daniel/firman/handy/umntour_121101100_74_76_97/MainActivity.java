@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -18,12 +19,12 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai
 
 public class MainActivity extends TourClassActivity {
 
-    private ImageView ivStart,ivCredit,ivExit;
+    private ImageButton ivStart,ivCredit,ivExit;
 
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setTitle("Do you want exit?")
+                .setTitle("Do you want to exit?")
                 .setCancelable(false)
                 .setNegativeButton(android.R.string.no, null)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()     {
@@ -42,15 +43,16 @@ public class MainActivity extends TourClassActivity {
 
         setContentView(R.layout.activity_main);
 
-        ivStart = (ImageView)findViewById(R.id.btnStartTour);
-        ivCredit = (ImageView)findViewById(R.id.btnCredit);
-        ivExit = (ImageView)findViewById(R.id.btnExit);
+        ivStart = (ImageButton)findViewById(R.id.btnStartTour);
+        ivCredit = (ImageButton)findViewById(R.id.btnCredit);
+        ivExit = (ImageButton)findViewById(R.id.btnExit);
 
         layout = (RelativeLayout) findViewById(R.id.layout);
         ivStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), Lantai_6_1.class);
+                i.putExtra("Start", "Begin");
                 animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
             }
@@ -82,18 +84,6 @@ public class MainActivity extends TourClassActivity {
             }
         });
         bg = (ImageView) findViewById(R.id.bg);
-        /*
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show(); //
-                i = new Intent(getApplicationContext(), Lantai_6_1.class);
-                animateFadeOutButtonBegin(layout);
-                animateFadeOutBegin();
-            }
-        });*/
 
         animateFadeInBegin();
     }

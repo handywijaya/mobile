@@ -19,7 +19,7 @@ public class Lantai_9_4 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_9_4);
 
         floorInformation = 9;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
@@ -46,7 +46,7 @@ public class Lantai_9_4 extends TourClassActivity {
         ivEnter907.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C907 & C908\nNormal Classrooms";
+                String info = "C907 and C908\nRegular Classrooms";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_4.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

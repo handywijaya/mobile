@@ -26,7 +26,7 @@
         android:background="@drawable/ic_help"
         android:backgroundTint="#00FFFF"
         android:layout_marginTop="144dp"
-        android:layout_marginStart="426dp" />
+        android:layout_marginStart="446dp" />
 
     <ImageButton
         android:layout_width="55dp"

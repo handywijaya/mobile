@@ -18,14 +18,14 @@ public class Lantai_9_2 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_9_2);
 
         floorInformation = 9;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //i = new Intent(getApplicationContext(), Lantai_9_3.class);
+                i = new Intent(getApplicationContext(), Lantai_9_3.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }

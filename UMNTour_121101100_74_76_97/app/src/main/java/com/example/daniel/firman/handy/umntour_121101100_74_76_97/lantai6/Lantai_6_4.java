@@ -2,7 +2,6 @@ package com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -10,7 +9,6 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasBesar;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasBesarKayu;
-import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasBesarTengah;
 
 public class Lantai_6_4 extends TourClassActivity {
 
@@ -63,7 +61,7 @@ public class Lantai_6_4 extends TourClassActivity {
         ivInMid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), KelasBesarTengah.class);
+                i = new Intent(getApplicationContext(), KelasBesarKayu.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }

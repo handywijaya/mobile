@@ -2,7 +2,13 @@ package com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -13,11 +19,15 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurD
 public class Lantai_6_1 extends TourClassActivity {
 
     public ImageButton ivStairsDown, ivStairsUp, ivMoveForward, ivMoveBackward, ivMoveToilet;
+    int counter = 0;
+    int beginTutorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lantai_6_1);
+
+        start = getIntent().getStringExtra("Start");
 
         //lantai berapa
         floorInformation = 6;
@@ -85,5 +95,209 @@ public class Lantai_6_1 extends TourClassActivity {
         });
 
         animateFadeInBegin();
+    }
+
+    public void animateButtonStairsDown() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        ivStairsDown.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonStairsUp();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonStairsUp() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        ivStairsUp.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonMoveForward();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonMoveToilet() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        ivMoveToilet.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonMoveBackward();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonMoveForward() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        ivMoveForward.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonMoveToilet();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonMoveBackward() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        ivMoveBackward.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonFab();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonFab() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        fab.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                animateButtonFab3();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    public void animateButtonFab3() {
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        fab3.startAnimation(fadeIn);
+
+        fadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if(start != null) {
+                    String info = "Tutorial";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_start, Lantai_6_1.this, floorInformation + 1, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+
+    @Override
+    protected void animateFadeInButtonBegin(final ViewGroup v) {
+
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        if(start != null) {
+            animateButtonStairsDown();
+        }
+        else {
+            for (int i = 0; i < v.getChildCount(); i++) {
+                View child = v.getChildAt(i);
+                if(child instanceof ViewGroup)
+                    animateFadeInButtonBegin((ViewGroup) child);
+                else if(child instanceof FloatingActionButton) {
+                    if(child.getId() == R.id.fab) child.startAnimation(fadeIn);
+                }
+                else if(child instanceof ImageButton) {
+                    child.startAnimation(fadeIn);
+                }
+            }
+        }
     }
 }

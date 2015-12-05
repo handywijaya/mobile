@@ -12,7 +12,7 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasReg
 
 public class Lantai_10_5 extends TourClassActivity {
 
-    public ImageButton ivMoveForward, ivMoveBackward, ivMoveToilet, ivEnter1006, ivEnter1005, ivEnter1003, ivEnter1001;
+    public ImageButton ivMoveForward, ivMoveBackward, ivEnter1006, ivEnter1005, ivEnter1003;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class Lantai_10_5 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_10_5);
 
         floorInformation = 10;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
@@ -43,21 +43,11 @@ public class Lantai_10_5 extends TourClassActivity {
             }
         });
 
-        ivMoveToilet = (ImageButton) findViewById(R.id.ivMoveToilet);
-        ivMoveToilet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String info = "This way leads to the toilet";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
-            }
-        });
-
         ivEnter1006 = (ImageButton) findViewById(R.id.ivEnter1006);
         ivEnter1006.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1006\nNormal Classroom";
+                String info = "C1006\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -67,7 +57,7 @@ public class Lantai_10_5 extends TourClassActivity {
         ivEnter1005.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1005\nNormal Classroom";
+                String info = "C1005\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -77,19 +67,9 @@ public class Lantai_10_5 extends TourClassActivity {
         ivEnter1003.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1003 & C1004\nNormal Classroom";
+                String info = "C1003 and C1004\nRegular Classrooms";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
-            }
-        });
-
-        ivEnter1001 = (ImageButton) findViewById(R.id.ivEnter1001);
-        ivEnter1001.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = new Intent(getApplicationContext(), KelasRegular.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
             }
         });
 

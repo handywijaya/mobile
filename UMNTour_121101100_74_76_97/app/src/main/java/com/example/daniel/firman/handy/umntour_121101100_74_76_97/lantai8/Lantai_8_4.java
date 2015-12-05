@@ -21,7 +21,7 @@ public class Lantai_8_4 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_8_4);
 
         floorInformation = 8;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
@@ -49,6 +49,8 @@ public class Lantai_8_4 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), KelasBesarTengah.class);
+                i.putExtra("Lantai", "8");
+                i.putExtra("Ruang", "813");
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }

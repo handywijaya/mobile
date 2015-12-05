@@ -19,7 +19,7 @@ public class Lantai_8_7 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_8_7);
 
         floorInformation = 8;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
@@ -46,7 +46,7 @@ public class Lantai_8_7 extends TourClassActivity {
         ivEnter812.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C812\nNormal Classroom";
+                String info = "C812\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -56,7 +56,7 @@ public class Lantai_8_7 extends TourClassActivity {
         ivEnter811.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C811\nNormal Classroom";
+                String info = "C811\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -66,7 +66,7 @@ public class Lantai_8_7 extends TourClassActivity {
         ivEnter810.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C809-C810\nNormal Classrooms";
+                String info = "C809 and C810\nRegular Classrooms";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

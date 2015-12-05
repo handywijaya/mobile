@@ -20,7 +20,7 @@ public class Lantai_8_3 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_8_3);
 
         floorInformation = 8;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveLeft = (ImageButton) findViewById(R.id.ivMoveLeft);
@@ -47,7 +47,7 @@ public class Lantai_8_3 extends TourClassActivity {
         ivEnter804.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C804\nNormal Classroom";
+                String info = "C804\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_3.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -57,7 +57,7 @@ public class Lantai_8_3 extends TourClassActivity {
         ivEnter803.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C803\nNormal Classroom";
+                String info = "C803\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_3.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -67,7 +67,7 @@ public class Lantai_8_3 extends TourClassActivity {
         ivEnter802.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C802\nNormal Classroom";
+                String info = "C802\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_3.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -78,6 +78,8 @@ public class Lantai_8_3 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), KelasRegular.class);
+                i.putExtra("Lantai", "8");
+                i.putExtra("Ruang", "801");
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }

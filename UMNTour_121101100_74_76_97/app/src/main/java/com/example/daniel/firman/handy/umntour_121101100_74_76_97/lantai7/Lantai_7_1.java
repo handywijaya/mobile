@@ -27,7 +27,7 @@ public class Lantai_7_1 extends TourClassActivity {
         floorInformation = 7;
 
         //informasi yang mau dimasukkan
-        String information = "Consists of Big Classrooms, Laboratory Room,"+"\n"+"Mac Laboratory Room, and Painting Room";
+        String information = "Consists of Big Classrooms, Laboratory Rooms,"+"\n"+"Mac Laboratory Rooms, and Painting Rooms";
 
         setUpLayout(information);
 
@@ -83,7 +83,7 @@ public class Lantai_7_1 extends TourClassActivity {
         ivHelpToilet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "This leads to toilet";
+                String info = "This way leads to the toilet";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_7_1.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

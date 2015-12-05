@@ -20,7 +20,7 @@ public class Lantai_10_4 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_10_4);
 
         floorInformation = 10;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);
@@ -48,6 +48,8 @@ public class Lantai_10_4 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 i = new Intent(getApplicationContext(), KelasBesarTengah.class);
+                i.putExtra("Lantai", "10");
+                i.putExtra("Ruang", "1013");
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }
@@ -57,7 +59,7 @@ public class Lantai_10_4 extends TourClassActivity {
         ivEnter1009.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1009\nNormal Classroom";
+                String info = "C1009\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_4.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -67,7 +69,7 @@ public class Lantai_10_4 extends TourClassActivity {
         ivEnter1007.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1007 & C1008\nNormal Classrooms";
+                String info = "C1007 and C1008\nRegular Classrooms";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_4.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

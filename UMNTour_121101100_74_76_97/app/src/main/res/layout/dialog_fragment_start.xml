@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:text="Tutorial"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="You can click information button at top right of the screen to see the information of current picture"
+        android:layout_below="@id/textView"
+        android:id="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        android:text="Legend:"
+        android:layout_below="@id/textView2"
+        android:layout_marginStart="10dp"
+        android:id="@+id/textView3"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:id="@+id/tableLegend">
+
+        <TableRow>
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_move"
+                android:backgroundTint="#00FF00">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Move your position"
+                android:gravity="center_horizontal|center_vertical"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_help"
+                android:backgroundTint="#00FFFF">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Information of class"
+                android:gravity="center_horizontal|center_vertical"/>
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_in_door"
+                android:backgroundTint="#00FF00">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Get in to classroom"
+                android:gravity="center_horizontal|center_vertical"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_out_door"
+                android:backgroundTint="#00FF00">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Get out of classroom"
+                android:gravity="center_horizontal|center_vertical"/>
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_stair_right"
+                android:backgroundTint="#FFFF00">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Take downstairs"
+                android:gravity="center_horizontal|center_vertical"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_stair_right"
+                android:backgroundTint="#00FF00">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Take upstairs"
+                android:gravity="center_horizontal|center_vertical"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"/>
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_stair_right"
+                android:backgroundTint="#FF0000">
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Forbidden downstairs"
+                android:gravity="center_horizontal|center_vertical"/>
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClose"
+        android:gravity="center"
+        android:layout_below="@id/tableLegend"
+        android:text="Close"/>
+
+</RelativeLayout>

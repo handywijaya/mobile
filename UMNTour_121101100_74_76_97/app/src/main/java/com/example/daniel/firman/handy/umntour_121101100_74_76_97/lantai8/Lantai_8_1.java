@@ -19,7 +19,7 @@ public class Lantai_8_1 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_8_1);
 
         floorInformation = 8;
-        String information = "Consists of normal and big classrooms";
+        String information = "Consists of regular and big classrooms";
         setUpLayout(information);
 
         ivStairsDown = (ImageButton) findViewById(R.id.ivStairDown);

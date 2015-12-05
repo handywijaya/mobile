@@ -20,14 +20,16 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/ivAboutUs"
         android:layout_below="@+id/textView"
-        android:background="@drawable/test"
+        android:background="@drawable/about_us"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_above="@+id/nama" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Handy - Firman - Daniel"
+        android:text="Handy - Daniel - Firman"
         android:id="@+id/nama"
         android:layout_above="@+id/nim"/>
 
@@ -35,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="12110110074 - 12110110076 - 12110110097"
+        android:text="12110110074 - 12110110097 - 12110110076"
         android:id="@+id/nim"
         android:layout_above="@+id/btnClose"/>
 
