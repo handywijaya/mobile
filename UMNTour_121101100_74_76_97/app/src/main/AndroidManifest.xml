@@ -159,8 +159,8 @@
             android:label="@string/title_activity_lantai_9_6"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".lantai9.Lantai_9_7"
-            android:label="@string/title_activity_lantai_9_7"
+            android:name=".lantai10.Lantai_10_1"
+            android:label="@string/title_activity_lantai_10_1"
             android:screenOrientation="landscape" />
     </application>
 
