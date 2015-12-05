@@ -59,7 +59,7 @@ public class Lantai_9_6 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "C903 & C904\nNormal Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_6.this, floorInformation + 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_6.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });

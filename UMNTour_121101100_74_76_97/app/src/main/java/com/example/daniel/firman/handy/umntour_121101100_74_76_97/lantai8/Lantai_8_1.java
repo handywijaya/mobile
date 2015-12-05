@@ -56,9 +56,9 @@ public class Lantai_8_1 extends TourClassActivity {
         ivMoveToilet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_8_2.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                String info = "This way leads to the toilet";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_1.this, floorInformation, info);
+                blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 

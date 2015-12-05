@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".lantai9.Lantai_10_1"
+    tools:context=".lantai10.Lantai_10_1"
     tools:showIn="@layout/activity_lantai_10_1"
     android:background="#000000">
 

@@ -1,4 +1,4 @@
-package com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9;
+package com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai10;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,17 +8,18 @@ import android.widget.ImageButton;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasRegular;
 
-public class Lantai_9_5 extends TourClassActivity {
+public class Lantai_10_5 extends TourClassActivity {
 
-    public ImageButton ivMoveForward, ivMoveBackward, ivMoveToilet, ivEnter903, ivEnter905, ivEnter906;
+    public ImageButton ivMoveForward, ivMoveBackward, ivMoveToilet, ivEnter1006, ivEnter1005, ivEnter1003, ivEnter1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lantai_9_5);
+        setContentView(R.layout.activity_lantai_10_5);
 
-        floorInformation = 9;
+        floorInformation = 10;
         String information = "Consists of normal and big classrooms";
         setUpLayout(information);
 
@@ -26,7 +27,7 @@ public class Lantai_9_5 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_9_6.class);
+                i = new Intent(getApplicationContext(), Lantai_10_6.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleInBegin(v);
             }
@@ -36,7 +37,7 @@ public class Lantai_9_5 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_9_4.class);
+                i = new Intent(getApplicationContext(), Lantai_10_4.class);
                 animateFadeOutButtonBegin(layout);
                 animateScaleOutBegin(v);
             }
@@ -47,38 +48,48 @@ public class Lantai_9_5 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "This way leads to the toilet";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_5.this, floorInformation, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 
-        ivEnter903 = (ImageButton) findViewById(R.id.ivEnter903);
-        ivEnter903.setOnClickListener(new View.OnClickListener() {
+        ivEnter1006 = (ImageButton) findViewById(R.id.ivEnter1006);
+        ivEnter1006.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C903 & C904\nNormal Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_5.this, floorInformation, info);
+                String info = "C1006\nNormal Classroom";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 
-        ivEnter905 = (ImageButton) findViewById(R.id.ivEnter905);
-        ivEnter905.setOnClickListener(new View.OnClickListener() {
+        ivEnter1005 = (ImageButton) findViewById(R.id.ivEnter1005);
+        ivEnter1005.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C905\nNormal Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_5.this, floorInformation, info);
+                String info = "C1005\nNormal Classroom";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 
-        ivEnter906 = (ImageButton) findViewById(R.id.ivEnter906);
-        ivEnter906.setOnClickListener(new View.OnClickListener() {
+        ivEnter1003 = (ImageButton) findViewById(R.id.ivEnter1003);
+        ivEnter1003.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C906\nNormal Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_9_5.this, floorInformation, info);
+                String info = "C1003 & C1004\nNormal Classroom";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_10_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
+            }
+        });
+
+        ivEnter1001 = (ImageButton) findViewById(R.id.ivEnter1001);
+        ivEnter1001.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(getApplicationContext(), KelasRegular.class);
+                animateFadeOutButtonBegin(layout);
+                animateScaleInBegin(v);
             }
         });
 
