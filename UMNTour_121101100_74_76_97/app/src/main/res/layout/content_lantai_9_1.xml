@@ -14,6 +14,14 @@
         android:layout_height="match_parent"
         android:background="@drawable/lt9_1"/>
 
+    <ImageButton android:id="@+id/ivStairUp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_stair_left"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="200dp" />
+
     <ImageButton android:id="@+id/ivStairDown"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -27,7 +35,7 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_move"
         android:backgroundTint="#00FF00"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="180dp" />
 
     <ImageButton android:id="@+id/ivMoveBackward"
@@ -51,7 +59,7 @@
         android:layout_height="55dp"
         android:background="@drawable/ic_help"
         android:backgroundTint="#00FFFF"
-        android:layout_marginStart="505dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="130dp"/>
 
 </RelativeLayout>

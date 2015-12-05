@@ -11,7 +11,7 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurD
 
 public class Lantai_9_1 extends TourClassActivity {
 
-    public ImageButton ivMoveForward, ivMoveBackward, ivMoveLift, ivStairsDown, ivEnter912;
+    public ImageButton ivMoveForward, ivMoveBackward, ivMoveLift, ivStairsDown, ivStairsUp, ivEnter912;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +52,22 @@ public class Lantai_9_1 extends TourClassActivity {
             }
         });
 
+        ivStairsUp = (ImageButton) findViewById(R.id.ivStairUp);
+        ivStairsUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String info = "Do you want to go upstairs?";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_9_1.this, floorInformation + 1, info);
+                blurDialog.show(getFragmentManager(), "blur_sample");
+            }
+        });
+
         ivStairsDown = (ImageButton) findViewById(R.id.ivStairDown);
         ivStairsDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String info = "Do you want to go downstairs?";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_9_1.this, floorInformation, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_9_1.this, floorInformation - 1, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
