@@ -136,25 +136,32 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_1"
-            android:label="@string/title_activity_lantai_9_1"/>
+            android:label="@string/title_activity_lantai_9_1"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_2"
-            android:label="@string/title_activity_lantai_9_2"/>
+            android:label="@string/title_activity_lantai_9_2"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_3"
-            android:label="@string/title_activity_lantai_9_3"/>
+            android:label="@string/title_activity_lantai_9_3"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_4"
-            android:label="@string/title_activity_lantai_9_4"/>
+            android:label="@string/title_activity_lantai_9_4"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_5"
-            android:label="@string/title_activity_lantai_9_5"/>
+            android:label="@string/title_activity_lantai_9_5"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_6"
-            android:label="@string/title_activity_lantai_9_6"/>
+            android:label="@string/title_activity_lantai_9_6"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".lantai9.Lantai_9_7"
-            android:label="@string/title_activity_lantai_9_7"/>
+            android:label="@string/title_activity_lantai_9_7"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
