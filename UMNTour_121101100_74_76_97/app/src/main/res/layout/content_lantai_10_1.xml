@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".lantai10.Lantai_10_1"
+    tools:showIn="@layout/activity_lantai_10_1"
+    android:background="#000000">
+
+    <ImageView android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lt10_1"/>
+
+    <ImageButton android:id="@+id/ivStairUp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_stair_left"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="180dp" />
+
+    <ImageButton android:id="@+id/ivStairDown"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_stair_right"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="270dp" />
+
+    <ImageButton android:id="@+id/ivMoveForward"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="160dp" />
+
+    <ImageButton android:id="@+id/ivMoveBackward"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="290dp" />
+
+    <ImageButton android:id="@+id/ivMoveLift"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_move"
+        android:backgroundTint="#00FF00"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="210dp"/>
+
+    <ImageButton android:id="@+id/ivEnter1012"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="110dp"/>
+
+</RelativeLayout>

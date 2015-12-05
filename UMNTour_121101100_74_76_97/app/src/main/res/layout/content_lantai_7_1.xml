@@ -47,8 +47,8 @@
     <ImageButton android:id="@+id/ivMoveToilet"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:background="@drawable/ic_move"
-        android:backgroundTint="#00FF00"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
         android:layout_marginTop="90dp"
         android:layout_marginStart="360dp"/>
 </RelativeLayout>

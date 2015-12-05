@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/layout"
+    tools:context="com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_6">
+
+    <include layout="@layout/content_lantai_9_6" />
+    <include layout="@layout/button_layout" />
+
+</RelativeLayout>

@@ -13,5 +13,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/bg"
-        android:background="@drawable/home_page_background"/>
+        android:background="@drawable/home_page_background_fix"/>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_centered="false"
+        app:rv_rippleDuration="200"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="20dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_start_tour"
+            android:id="@+id/btnStartTour"
+            android:layout_alignTop="@+id/more1"
+            />
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_centered="false"
+        app:rv_rippleDuration="200"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="230dp"
+
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_credit"
+
+            android:id="@+id/btnCredit"
+            android:layout_alignTop="@+id/more1"
+            />
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_centered="false"
+        app:rv_rippleDuration="200"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="390dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_exit"
+
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnExit"
+            android:layout_alignTop="@+id/more3"
+            android:layout_toEndOf="@+id/btnCredit" />
+    </com.andexert.library.RippleView>
+
+
 </RelativeLayout>
