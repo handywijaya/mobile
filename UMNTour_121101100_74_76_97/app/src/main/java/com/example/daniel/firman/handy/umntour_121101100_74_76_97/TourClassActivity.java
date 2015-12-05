@@ -21,6 +21,8 @@ import android.widget.RelativeLayout;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai7.Lantai_7_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai8.Lantai_8_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_1;
 
 /**
  * Created by Handy on 11/28/2015.
@@ -276,13 +278,13 @@ public class TourClassActivity extends AppCompatActivity {
                 animateFadeOutBegin();
                 break;
             case 8 :
-                /*i = new Intent(getApplicationContext(), Lantai_8_1.class);
+                i = new Intent(getApplicationContext(), Lantai_8_1.class);
                 animateFadeOutBegin();
-                break;*/
+                break;
             case 9 :
-                /*i = new Intent(getApplicationContext(), Lantai_9_1.class);
+                i = new Intent(getApplicationContext(), Lantai_9_1.class);
                 animateFadeOutBegin();
-                break;*/
+                break;
             case 10 :
                 /*i = new Intent(getApplicationContext(), Lantai_10_1.class);
                 animateFadeOutBegin();
