@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
 
 public class MainActivity extends TourClassActivity {
@@ -62,9 +63,9 @@ public class MainActivity extends TourClassActivity {
         ivCredit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent i = new Intent(getApplicationContext(), Lantai_6_1.class);
-                animateFadeOutButtonBegin(layout);
-                animateFadeOutBegin();*/
+                String info =null;
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_credit, MainActivity.this, floorInformation, info);
+                blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
 

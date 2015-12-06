@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:text="Team Member:"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Daniel Sukmana"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:text="12110110097"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Firmansyah Ramadhan"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:text="12110110076"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Handy Wijaya"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:text="12110110074"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:layout_weight="1"/>
+        </TableRow>
+
+
+
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TableRow>
+            <TextView
+                android:text="Special Thanks to:"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/thanks1"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/thanks2"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnClose"
+                android:layout_below="@+id/tvThanksTo"
+                android:layout_weight="1"
+                android:text="Close"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
