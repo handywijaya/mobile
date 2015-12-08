@@ -24,15 +24,9 @@ public class MainActivity extends TourClassActivity {
 
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Do you want to exit?")
-                .setCancelable(false)
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()     {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        finish();
-                    }
-                }).create().show();
+        String info = "Exit";
+        blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_exit, MainActivity.this, floorInformation, info);
+        blurDialog.show(getFragmentManager(), "blur_sample");
     }
 
     @Override
@@ -63,7 +57,7 @@ public class MainActivity extends TourClassActivity {
         ivCredit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info =null;
+                String info = "Credit";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_credit, MainActivity.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -72,16 +66,9 @@ public class MainActivity extends TourClassActivity {
         ivExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Do you want exit?")
-                        .setCancelable(false)
-                        .setNegativeButton(android.R.string.no, null)
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()     {
-                            public void onClick(DialogInterface arg0, int arg1) {
-                                finish();
-                            }
-                        }).create().show();
+                String info = "Exit";
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, MainActivity.this, floorInformation, info);
+                blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
         bg = (ImageView) findViewById(R.id.bg);

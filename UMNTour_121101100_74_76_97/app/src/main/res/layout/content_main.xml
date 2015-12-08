@@ -40,7 +40,6 @@
         android:layout_height="wrap_content"
         app:rv_centered="false"
         app:rv_rippleDuration="200"
-        android:layout_marginTop="315dp"
         android:layout_marginStart="230dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

@@ -194,7 +194,23 @@ public class BlurDialog extends BlurDialogFragment {
                     }
                 });
                 break;
-
+            case R.layout.dialog_fragment_exit:
+                btnYes = (Button) view.findViewById(R.id.btnYes);
+                btnNo = (Button) view.findViewById(R.id.btnNo);
+                TextView tvExit = (TextView) view.findViewById(R.id.tvExit);
+                btnYes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.exitApp();
+                        fragment.dismiss();
+                    }
+                });
+                btnNo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        fragment.dismiss();
+                    }
+                });
         }
         builder.setView(view);
         return builder.create();

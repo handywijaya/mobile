@@ -292,7 +292,7 @@ public class Lantai_6_1 extends TourClassActivity {
                 if(child instanceof ViewGroup)
                     animateFadeInButtonBegin((ViewGroup) child);
                 else if(child instanceof FloatingActionButton) {
-                    if(child.getId() == R.id.fab) child.startAnimation(fadeIn);
+                    if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
                 }
                 else if(child instanceof ImageButton) {
                     child.startAnimation(fadeIn);
