@@ -311,4 +311,8 @@ public class TourClassActivity extends AppCompatActivity {
                 child.setVisibility(View.INVISIBLE);
         }
     }
+
+    public void exitApp() {
+        finish();
+    }
 }

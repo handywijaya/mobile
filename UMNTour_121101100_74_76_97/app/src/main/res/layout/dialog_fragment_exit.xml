@@ -5,19 +5,19 @@
     android:paddingTop="10dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Do you want to go to upstairs?"
-        android:id="@+id/tvChangeFloor"
+        android:text="Do you want to exit?"
+        android:id="@+id/tvExit"
         android:gravity="center"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_below="@+id/tvChangeFloor"
+        android:layout_below="@+id/tvExit"
         android:orientation="horizontal">
 
         <Button
