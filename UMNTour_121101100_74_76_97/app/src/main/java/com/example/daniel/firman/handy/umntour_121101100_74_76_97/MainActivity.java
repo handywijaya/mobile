@@ -67,7 +67,7 @@ public class MainActivity extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "Exit";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_home, MainActivity.this, floorInformation, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_exit, MainActivity.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
