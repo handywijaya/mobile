@@ -21,4 +21,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:id="@+id/ivMoveBackward"/>
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/ic_help"
+        android:backgroundTint="#00FFFF"
+        android:id="@+id/ivHelpToilet"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="120dp"/>
 </RelativeLayout>
