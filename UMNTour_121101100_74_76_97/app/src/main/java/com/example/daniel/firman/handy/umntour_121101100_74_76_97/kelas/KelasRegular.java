@@ -27,7 +27,7 @@ public class KelasRegular extends TourClassActivity {
         floorInformation = Integer.parseInt(lantai);
 
         //informasi yang mau dimasukkan
-        String information = "C"+ Integer.parseInt(ruang) + "\nRegular Classroom";
+        String information = "C"+ Integer.parseInt(ruang) + "\nRegular Classroom. Used for lectures from any faculty.";
 
         setUpLayout(information);
 

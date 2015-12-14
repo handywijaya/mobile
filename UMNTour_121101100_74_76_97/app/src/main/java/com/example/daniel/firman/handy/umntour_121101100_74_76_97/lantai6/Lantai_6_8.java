@@ -24,7 +24,7 @@ public class Lantai_6_8 extends TourClassActivity {
         floorInformation = 6;
 
         //informasi yang mau dimasukkan
-        String information = "Consists of Big Classrooms";
+        String information = "Consists of 10 Big Classrooms and is connected to the Annex (Decoration Room).";
 
         setUpLayout(information);
 

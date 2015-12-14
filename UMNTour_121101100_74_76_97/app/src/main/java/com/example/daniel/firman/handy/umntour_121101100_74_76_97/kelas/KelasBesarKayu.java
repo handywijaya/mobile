@@ -23,7 +23,7 @@ public class KelasBesarKayu extends TourClassActivity {
         floorInformation = 6;
 
         //informasi yang mau dimasukkan
-        String information = "C609\nBig Classroom";
+        String information = "C609\nBig Classroom. Used for lectures from any faculty.";
 
         setUpLayout(information);
 

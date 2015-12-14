@@ -25,7 +25,7 @@ public class KelasBesar extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C601\n" +
-                "Big Classroom";
+                "Big Classroom. Used for lectures from any faculty.";
 
         setUpLayout(information);
 

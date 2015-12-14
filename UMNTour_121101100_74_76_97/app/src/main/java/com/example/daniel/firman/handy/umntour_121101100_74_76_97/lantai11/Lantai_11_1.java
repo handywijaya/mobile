@@ -21,7 +21,7 @@ public class Lantai_11_1 extends TourClassActivity {
         setContentView(R.layout.activity_lantai_11_1);
 
         floorInformation = 11;
-        String information = "Consists of regular and big classrooms";
+        String information = "Consists of 12 Regular Classrooms and 2 Big Classrooms.";
         setUpLayout(information);
 
         ivMoveForward = (ImageButton) findViewById(R.id.ivMoveForward);

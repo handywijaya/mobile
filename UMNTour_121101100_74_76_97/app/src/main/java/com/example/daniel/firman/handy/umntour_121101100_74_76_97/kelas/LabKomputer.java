@@ -26,7 +26,9 @@ public class LabKomputer extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C702\n" +
-                "Computer Laboratory";
+                "Computer Laboratory. Used for lectures that needs practical study." +
+                "Usually used by Information and Communication Technology faculty" +
+                "and Economics faculty";
 
         setUpLayout(information);
 

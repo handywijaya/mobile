@@ -30,7 +30,7 @@ public class KelasBesarTengah extends TourClassActivity {
         floorInformation = Integer.parseInt(lantai);
 
         //informasi yang mau dimasukkan
-        String information = "C"+ Integer.parseInt(ruang) + "\nBig Classroom";
+        String information = "C"+ Integer.parseInt(ruang) + "\nBig Classroom. Used for lectures from any faculty.";
 
         setUpLayout(information);
 
