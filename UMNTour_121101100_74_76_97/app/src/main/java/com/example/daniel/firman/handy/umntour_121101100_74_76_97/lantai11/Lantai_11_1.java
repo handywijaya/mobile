@@ -28,9 +28,12 @@ public class Lantai_11_1 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if (buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -38,9 +41,12 @@ public class Lantai_11_1 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_6.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_6.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 
@@ -48,9 +54,12 @@ public class Lantai_11_1 extends TourClassActivity {
         ivMoveElevator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_2.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_2.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -58,9 +67,12 @@ public class Lantai_11_1 extends TourClassActivity {
         ivStairDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "Do you want to go downstairs?";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_11_1.this, floorInformation - 1, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "Do you want to go downstairs?";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_change_floor, Lantai_11_1.this, floorInformation - 1, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 

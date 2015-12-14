@@ -27,9 +27,12 @@ public class Lantai_11_6 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_1.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if (buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_1.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -37,9 +40,12 @@ public class Lantai_11_6 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_5.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if (buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_5.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 
@@ -47,9 +53,12 @@ public class Lantai_11_6 extends TourClassActivity {
         ivEnter1101.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1101 and C1102\nRegular Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "C1101 and C1102\nRegular Classrooms";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 
@@ -57,9 +66,12 @@ public class Lantai_11_6 extends TourClassActivity {
         ivEnter1104.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1104\nRegular Classroom";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "C1104\nRegular Classroom";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 
@@ -67,9 +79,12 @@ public class Lantai_11_6 extends TourClassActivity {
         ivEnter1114.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1114\nBig Classroom";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "C1114\nBig Classroom";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_6.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 

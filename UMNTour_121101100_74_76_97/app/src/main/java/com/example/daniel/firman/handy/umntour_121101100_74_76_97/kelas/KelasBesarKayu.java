@@ -23,7 +23,7 @@ public class KelasBesarKayu extends TourClassActivity {
         floorInformation = 6;
 
         //informasi yang mau dimasukkan
-        String information = "C609\nBig Classroom. Used for lectures from any faculty.";
+        String information = "C609\nBig Classroom\nUsed for lectures from any faculty";
 
         setUpLayout(information);
 
@@ -31,9 +31,12 @@ public class KelasBesarKayu extends TourClassActivity {
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_4.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_6_4.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 

@@ -25,7 +25,7 @@ public class KelasLukis extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C704\n" +
-                "Painting Classroom. Used for painting class for Visual and Communication Design faculty.";
+                "Painting Classroom\nUsed for painting class for Visual and Communication Design faculty";
 
         setUpLayout(information);
 
@@ -33,9 +33,12 @@ public class KelasLukis extends TourClassActivity {
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_2.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_2.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 

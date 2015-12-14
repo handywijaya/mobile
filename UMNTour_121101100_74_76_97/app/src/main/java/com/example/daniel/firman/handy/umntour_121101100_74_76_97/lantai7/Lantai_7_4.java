@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_4;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_6;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_7;
@@ -15,7 +16,7 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai
 public class Lantai_7_4 extends TourClassActivity {
 
 
-    ImageButton ivMoveLeft, ivMoveBackward;
+    ImageButton ivMoveLeft, ivMoveBackward, ivElevator;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +34,12 @@ public class Lantai_7_4 extends TourClassActivity {
         ivMoveLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_5.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_5.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -44,9 +48,25 @@ public class Lantai_7_4 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
+            }
+        });
+
+        ivElevator = (ImageButton) findViewById(R.id.ivElevator);
+        ivElevator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "Elevator";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_elevator, Lantai_7_4.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 

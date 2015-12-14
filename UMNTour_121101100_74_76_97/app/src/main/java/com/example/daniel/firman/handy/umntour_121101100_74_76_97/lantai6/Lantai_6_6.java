@@ -29,9 +29,12 @@ public class Lantai_6_6 extends TourClassActivity {
         ivHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "Decoration Room\nRoom for college students to prepare properties for an event";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_6.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "Decoration Room\nRoom for college students to prepare properties for an event";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_6.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 
@@ -39,9 +42,12 @@ public class Lantai_6_6 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_5.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_6_5.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 

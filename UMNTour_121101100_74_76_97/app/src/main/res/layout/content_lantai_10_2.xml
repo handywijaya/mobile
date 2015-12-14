@@ -22,6 +22,15 @@
         android:layout_marginStart="130dp"
         android:layout_marginTop="180dp" />
 
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivElevator"
+        android:background="@drawable/ic_stair_right"
+        android:backgroundTint="#00FF00"
+        android:layout_marginTop="170dp"
+        android:layout_marginStart="320dp"/>
+
     <ImageButton android:id="@+id/ivMoveBackward"
         android:layout_width="55dp"
         android:layout_height="55dp"

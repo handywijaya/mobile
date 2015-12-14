@@ -26,9 +26,9 @@ public class LabKomputer extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C702\n" +
-                "Computer Laboratory. Used for lectures that needs practical study." +
-                "Usually used by Information and Communication Technology faculty" +
-                "and Economics faculty";
+                "Computer Laboratory\nUsed for lectures that needs practical study. " +
+                "Usually used by Information and Communication Technology faculty " +
+                "and Economics faculty.";
 
         setUpLayout(information);
 
@@ -36,9 +36,12 @@ public class LabKomputer extends TourClassActivity {
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 

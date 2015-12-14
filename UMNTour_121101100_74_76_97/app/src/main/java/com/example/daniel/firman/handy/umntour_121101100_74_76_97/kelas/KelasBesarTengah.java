@@ -30,7 +30,7 @@ public class KelasBesarTengah extends TourClassActivity {
         floorInformation = Integer.parseInt(lantai);
 
         //informasi yang mau dimasukkan
-        String information = "C"+ Integer.parseInt(ruang) + "\nBig Classroom. Used for lectures from any faculty.";
+        String information = "C"+ Integer.parseInt(ruang) + "\nBig Classroom\nUsed for lectures from any faculty";
 
         setUpLayout(information);
 
@@ -38,14 +38,17 @@ public class KelasBesarTengah extends TourClassActivity {
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(floorInformation == 8)
-                    i = new Intent(getApplicationContext(), Lantai_8_4.class);
-                if(floorInformation == 9)
-                    i = new Intent(getApplicationContext(), Lantai_9_6.class);
-                else if(floorInformation == 10)
-                    i = new Intent(getApplicationContext(), Lantai_10_4.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    if (floorInformation == 8)
+                        i = new Intent(getApplicationContext(), Lantai_8_4.class);
+                    if (floorInformation == 9)
+                        i = new Intent(getApplicationContext(), Lantai_9_6.class);
+                    else if (floorInformation == 10)
+                        i = new Intent(getApplicationContext(), Lantai_10_4.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 

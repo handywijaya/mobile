@@ -12,7 +12,7 @@ import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurD
 
 public class Lantai_11_2 extends TourClassActivity {
 
-    ImageButton ivMoveForward, ivMoveBackward, ivForbiddenElevator;
+    ImageButton ivMoveForward, ivMoveBackward, ivForbiddenElevator, ivElevator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,12 @@ public class Lantai_11_2 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if (buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -37,9 +40,12 @@ public class Lantai_11_2 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_11_1.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_11_1.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 
@@ -47,10 +53,26 @@ public class Lantai_11_2 extends TourClassActivity {
         ivForbiddenElevator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "You can reach 12th floor of C Building with elevators";
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "You can reach 12th floor of C Building with elevators";
 
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_other_floor, Lantai_11_2.this, floorInformation + 1, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_other_floor, Lantai_11_2.this, floorInformation + 1, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
+            }
+        });
+
+        ivElevator = (ImageButton) findViewById(R.id.ivElevator);
+        ivElevator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "Elevator";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_elevator, Lantai_11_2.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 

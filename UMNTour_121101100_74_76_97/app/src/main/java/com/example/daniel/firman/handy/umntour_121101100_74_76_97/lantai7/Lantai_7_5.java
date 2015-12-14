@@ -9,13 +9,14 @@ import android.widget.ImageButton;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.kelas.KelasBesar;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_6;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_8;
 
 public class Lantai_7_5 extends TourClassActivity {
 
 
-    ImageButton ivMoveForward, ivMoveBackward, ivHelpCompLab, ivHelpBigClass;
+    ImageButton ivMoveForward, ivMoveBackward, ivHelpCompLab, ivClass708;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +35,27 @@ public class Lantai_7_5 extends TourClassActivity {
         ivHelpCompLab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C706 and C707\nComputer Laboratories";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_7_5.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "C706 and C707\nComputer Laboratories";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_7_5.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 
-        ivHelpBigClass = (ImageButton) findViewById(R.id.ivHelpBigClass);
-        ivHelpBigClass.setOnClickListener(new View.OnClickListener() {
+        ivClass708 = (ImageButton) findViewById(R.id.ivClass708);
+        ivClass708.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C708\nBig Classroom";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_7_5.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), KelasBesar.class);
+                    i.putExtra("Lantai", "7");
+                    i.putExtra("Ruang", "708");
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 
@@ -54,9 +63,12 @@ public class Lantai_7_5 extends TourClassActivity {
         ivMoveForward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_6.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_6.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 
@@ -64,9 +76,12 @@ public class Lantai_7_5 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 

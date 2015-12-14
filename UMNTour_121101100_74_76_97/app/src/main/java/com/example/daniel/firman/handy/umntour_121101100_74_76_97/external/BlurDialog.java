@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.R;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.TourClassActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.tvbarthel.lib.blurdialogfragment.BlurDialogFragment;
 
 /**
@@ -52,6 +55,8 @@ public class BlurDialog extends BlurDialogFragment {
     private static TourClassActivity tourClass;
     static int floor;
     static String information;
+    List<Integer> floorList;
+    List<String> textFloorList;
     Button btnYes, btnNo, btnClose;
 
     public static BlurDialog newInstance(int layoutId, TourClassActivity tourClassActivity, int floorInformation, String info) {
@@ -114,12 +119,14 @@ public class BlurDialog extends BlurDialogFragment {
                     @Override
                     public void onClick(View v) {
                         tourClass.goHome();
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
                 btnNo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -129,6 +136,7 @@ public class BlurDialog extends BlurDialogFragment {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -142,6 +150,7 @@ public class BlurDialog extends BlurDialogFragment {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -155,12 +164,14 @@ public class BlurDialog extends BlurDialogFragment {
                     @Override
                     public void onClick(View v) {
                         tourClass.changeFloor(floor);
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
                 btnNo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -172,6 +183,7 @@ public class BlurDialog extends BlurDialogFragment {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -181,6 +193,7 @@ public class BlurDialog extends BlurDialogFragment {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -190,6 +203,7 @@ public class BlurDialog extends BlurDialogFragment {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
@@ -197,7 +211,6 @@ public class BlurDialog extends BlurDialogFragment {
             case R.layout.dialog_fragment_exit:
                 btnYes = (Button) view.findViewById(R.id.btnYes);
                 btnNo = (Button) view.findViewById(R.id.btnNo);
-                TextView tvExit = (TextView) view.findViewById(R.id.tvExit);
                 btnYes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -208,9 +221,77 @@ public class BlurDialog extends BlurDialogFragment {
                 btnNo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        tourClass.setButtonClickOn();
                         fragment.dismiss();
                     }
                 });
+                break;
+            case R.layout.dialog_fragment_elevator:
+                textFloorList = new ArrayList<>();
+                floorList = new ArrayList<>();
+                for(int j = 6; j < 12; j++) {
+                    if(j == floor) continue;
+                    else {
+                        textFloorList.add(j + "th Floor");
+                        floorList.add(j);
+                    }
+                }
+
+                Button btn1 = (Button) view.findViewById(R.id.btn1);
+                btn1.setText(textFloorList.get(0));
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloorElevator(floorList.get(0));
+                        tourClass.setButtonClickOn();
+                        fragment.dismiss();
+                    }
+                });
+
+                Button btn2 = (Button) view.findViewById(R.id.btn2);
+                btn2.setText(textFloorList.get(1));
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloorElevator(floorList.get(1));
+                        tourClass.setButtonClickOn();
+                        fragment.dismiss();
+                    }
+                });
+
+                Button btn3 = (Button) view.findViewById(R.id.btn3);
+                btn3.setText(textFloorList.get(2));
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloorElevator(floorList.get(2));
+                        tourClass.setButtonClickOn();
+                        fragment.dismiss();
+                    }
+                });
+
+                Button btn4 = (Button) view.findViewById(R.id.btn4);
+                btn4.setText(textFloorList.get(3));
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloorElevator(floorList.get(3));
+                        tourClass.setButtonClickOn();
+                        fragment.dismiss();
+                    }
+                });
+
+                Button btn5 = (Button) view.findViewById(R.id.btn5);
+                btn5.setText(textFloorList.get(4));
+                btn5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tourClass.changeFloorElevator(floorList.get(4));
+                        tourClass.setButtonClickOn();
+                        fragment.dismiss();
+                    }
+                });
+                break;
         }
         builder.setView(view);
         return builder.create();

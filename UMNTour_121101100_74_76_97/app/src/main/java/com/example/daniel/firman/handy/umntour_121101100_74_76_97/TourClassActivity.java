@@ -21,11 +21,17 @@ import android.widget.RelativeLayout;
 import com.andexert.library.RippleView;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.external.BlurDialog;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai10.Lantai_10_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai10.Lantai_10_2;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai11.Lantai_11_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai11.Lantai_11_2;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai6.Lantai_6_5;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai7.Lantai_7_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai7.Lantai_7_4;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai8.Lantai_8_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai8.Lantai_8_6;
 import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_1;
+import com.example.daniel.firman.handy.umntour_121101100_74_76_97.lantai9.Lantai_9_2;
 
 /**
  * Created by Handy on 11/28/2015.
@@ -40,6 +46,7 @@ public class TourClassActivity extends AppCompatActivity {
     protected int floorInformation;
     protected BlurDialog blurDialog;
     protected String start;
+    protected int buttonClick;
 
     @Override
     public void onBackPressed() {
@@ -55,6 +62,12 @@ public class TourClassActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+
+        buttonClick = 0;
+    }
+
+    public void setButtonClickOn() {
+        buttonClick = 1;
     }
 
     protected void setUpLayout(final String info2) {
@@ -181,6 +194,27 @@ public class TourClassActivity extends AppCompatActivity {
         for (int i = 0; i < v.getChildCount(); i++) {
             View child = v.getChildAt(i);
             if(child instanceof ViewGroup)
+                animateFadeInButtonBegin2((ViewGroup) child);
+            else if(child instanceof FloatingActionButton) {
+                if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
+            }
+            else if(child instanceof ImageButton) {
+                child.startAnimation(fadeIn);
+            }
+        }
+
+        buttonClick = 1;
+    }
+
+    protected void animateFadeInButtonBegin2(ViewGroup v) {
+
+        Animation fadeIn = new AlphaAnimation(0,1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        for (int i = 0; i < v.getChildCount(); i++) {
+            View child = v.getChildAt(i);
+            if(child instanceof ViewGroup)
                 animateFadeInButtonBegin((ViewGroup) child);
             else if(child instanceof FloatingActionButton) {
                 if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
@@ -295,6 +329,42 @@ public class TourClassActivity extends AppCompatActivity {
                 break;
             case 11 :
                 i = new Intent(getApplicationContext(), Lantai_11_1.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+        }
+
+    }
+
+    public void changeFloorElevator(int floor) {
+        switch(floor) {
+            case 6 :
+                i = new Intent(getApplicationContext(), Lantai_6_5.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+            case 7 :
+                i = new Intent(getApplicationContext(), Lantai_7_4.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+            case 8 :
+                i = new Intent(getApplicationContext(), Lantai_8_6.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+            case 9 :
+                i = new Intent(getApplicationContext(), Lantai_9_2.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+            case 10 :
+                i = new Intent(getApplicationContext(), Lantai_10_2.class);
+                animateFadeOutButtonBegin(layout);
+                animateFadeOutBegin();
+                break;
+            case 11 :
+                i = new Intent(getApplicationContext(), Lantai_11_2.class);
                 animateFadeOutButtonBegin(layout);
                 animateFadeOutBegin();
                 break;

@@ -25,7 +25,7 @@ public class LabMac extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C709\n" +
-                "Mac Laboratory. Used for lectures that needs practical study."+
+                "Mac Laboratory\nUsed for lectures that needs practical study. "+
                 "Usually used by Visual and Communication Design faculty.";
 
         setUpLayout(information);
@@ -34,9 +34,12 @@ public class LabMac extends TourClassActivity {
         ivOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_7_3.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleInBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_7_3.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleInBegin(v);
+                }
             }
         });
 

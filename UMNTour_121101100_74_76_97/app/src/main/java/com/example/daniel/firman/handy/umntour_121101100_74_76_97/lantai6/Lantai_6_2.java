@@ -31,9 +31,12 @@ public class Lantai_6_2 extends TourClassActivity {
         ivMoveBackward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(getApplicationContext(), Lantai_6_1.class);
-                animateFadeOutButtonBegin(layout);
-                animateScaleOutBegin(v);
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    i = new Intent(getApplicationContext(), Lantai_6_1.class);
+                    animateFadeOutButtonBegin(layout);
+                    animateScaleOutBegin(v);
+                }
             }
         });
 
@@ -41,9 +44,12 @@ public class Lantai_6_2 extends TourClassActivity {
         ivMoveToilet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "Toilet\nThis door leads to male toilet, the door accross this door leads to female toilet";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_2.this, floorInformation, info);
-                blurDialog.show(getFragmentManager(), "blur_sample");
+                if(buttonClick == 1) {
+                    buttonClick = 0;
+                    String info = "Toilet\nThis door leads to male toilet, the door accross this door leads to female toilet";
+                    blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_2.this, floorInformation, info);
+                    blurDialog.show(getFragmentManager(), "blur_sample");
+                }
             }
         });
 
