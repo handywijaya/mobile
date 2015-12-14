@@ -25,7 +25,8 @@ public class LabMac extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C709\n" +
-                "Mac Laboratory";
+                "Mac Laboratory. Used for lectures that needs practical study."+
+                "Usually used by Visual and Communication Design faculty.";
 
         setUpLayout(information);
 

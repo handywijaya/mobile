@@ -21,7 +21,7 @@ public class Lantai_6_6 extends TourClassActivity {
         floorInformation = 6;
 
         //informasi yang mau dimasukkan
-        String information = "Consists of Big Classrooms";
+        String information = "Consists of 10 Big Classrooms and is connected to the Annex (Decoration Room).";
 
         setUpLayout(information);
 
@@ -29,7 +29,7 @@ public class Lantai_6_6 extends TourClassActivity {
         ivHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "Decoration Room\nRoom for college student to prepare properties for an event";
+                String info = "Decoration Room\nRoom for college students to prepare properties for an event";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_6_6.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }

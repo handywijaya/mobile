@@ -25,7 +25,7 @@ public class KelasLukis extends TourClassActivity {
 
         //informasi yang mau dimasukkan
         String information = "C704\n" +
-                "Painting Classroom";
+                "Painting Classroom. Used for painting class for Visual and Communication Design faculty.";
 
         setUpLayout(information);
 
