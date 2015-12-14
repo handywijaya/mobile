@@ -47,7 +47,7 @@ public class Lantai_8_7 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "C812\nRegular Classroom";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -57,7 +57,7 @@ public class Lantai_8_7 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "C811\nRegular Classroom";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });
@@ -67,7 +67,7 @@ public class Lantai_8_7 extends TourClassActivity {
             @Override
             public void onClick(View v) {
                 String info = "C809 and C810\nRegular Classrooms";
-                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation - 1, info);
+                blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_8_7.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
         });

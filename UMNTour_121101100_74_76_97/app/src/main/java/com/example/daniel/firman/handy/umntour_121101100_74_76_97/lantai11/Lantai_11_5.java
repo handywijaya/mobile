@@ -57,7 +57,7 @@ public class Lantai_11_5 extends TourClassActivity {
         ivEnter1105.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1105\nNormal Classroom";
+                String info = "C1105\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
@@ -67,7 +67,7 @@ public class Lantai_11_5 extends TourClassActivity {
         ivEnter1106.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String info = "C1106\nNormal Classroom";
+                String info = "C1106\nRegular Classroom";
                 blurDialog = new BlurDialog().newInstance(R.layout.dialog_fragment_information, Lantai_11_5.this, floorInformation, info);
                 blurDialog.show(getFragmentManager(), "blur_sample");
             }
