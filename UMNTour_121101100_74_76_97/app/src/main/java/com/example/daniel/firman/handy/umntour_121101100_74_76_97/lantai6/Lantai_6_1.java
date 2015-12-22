@@ -305,13 +305,34 @@ public class Lantai_6_1 extends TourClassActivity {
             for (int i = 0; i < v.getChildCount(); i++) {
                 View child = v.getChildAt(i);
                 if(child instanceof ViewGroup)
-                    animateFadeInButtonBegin((ViewGroup) child);
+                    animateFadeInButtonBegin2((ViewGroup) child);
                 else if(child instanceof FloatingActionButton) {
                     if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
                 }
                 else if(child instanceof ImageButton) {
                     child.startAnimation(fadeIn);
                 }
+            }
+
+            buttonClick = 1;
+        }
+    }
+
+    protected void animateFadeInButtonBegin2(final ViewGroup v) {
+
+        Animation fadeIn = new AlphaAnimation(0, 1);
+        fadeIn.setDuration(400);
+        fadeIn.setFillAfter(true);
+
+        for (int i = 0; i < v.getChildCount(); i++) {
+            View child = v.getChildAt(i);
+            if(child instanceof ViewGroup)
+                animateFadeInButtonBegin2((ViewGroup) child);
+            else if(child instanceof FloatingActionButton) {
+                if(child.getId() == R.id.fab || child.getId() == R.id.fab3) child.startAnimation(fadeIn);
+            }
+            else if(child instanceof ImageButton) {
+                child.startAnimation(fadeIn);
             }
         }
     }
